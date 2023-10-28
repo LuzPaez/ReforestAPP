@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecuperarContrasena3">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/logo"
+        />
+    <TextView
+        android:id ="@+id/txtNombreAPP"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:text="ReforestAPP"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#1A7A5F"
+        android:layout_marginBottom="5dp"
+        />
+
+    <TextView
+        android:id ="@+id/TxtRecupPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48sp"
+        android:text="Recuperar contraseña"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#1A7A5F"
+        android:layout_marginBottom="10sp"
+        />
+
+    <TextView
+        android:id="@+id/Txt_Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡Bien! Código válido e identidad verificada. Crea una contraseña segura con ocho caracteres, mayúsculas, minúsculas, números y signos. Elige tu nueva contraseña, escríbela, confírmala y entra a tu cuenta"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:paddingStart="55sp"
+        android:paddingEnd="55sp"
+        android:layout_marginTop="7sp"
+        android:layout_marginBottom="5sp"
+        />
+
+    <TextView
+        android:id="@+id/Txt_NewContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingresa una nueva contraseña "
+        android:gravity="left"
+        android:textColor="#006804"
+        android:textSize="16sp"
+        android:paddingStart="55sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="5sp"
+        />
+
+    <EditText
+        android:id="@+id/EdText_NewConstrasena"
+        android:layout_width="300sp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:hint=" Nueva Contraseña"
+        android:textSize="14sp"
+        android:background="@drawable/borde_entrada"
+        android:layout_margin="10sp"
+        android:layout_marginBottom="15sp"
+        />
+
+    <TextView
+        android:id="@+id/Txt_ConfirmNewContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar la nueva contraseña "
+        android:gravity="left"
+        android:textColor="#006804"
+        android:textSize="16sp"
+        android:paddingStart="55sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="5sp"
+        />
+
+    <EditText
+        android:id="@+id/EdText_ConfirmNewConstrasena"
+        android:layout_width="300sp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:hint=" Confirmar Nueva Contraseña"
+        android:textSize="14sp"
+        android:background="@drawable/borde_entrada"
+        android:layout_margin="10sp"
+        android:layout_marginBottom="15sp"
+        />
+
+    <Button
+        android:id="@+id/btn_Confirmar"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:backgroundTint="#00674B"
+        android:text="Confirmar" />
+
+
+</LinearLayout>

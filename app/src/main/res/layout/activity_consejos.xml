@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Consejos"
+>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="90dp"
+        android:layout_height="104dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/txtNombreAPP"
+        android:layout_width="match_parent"
+        android:layout_height="25sp"
+        android:layout_marginTop="104dp"
+        android:gravity="center"
+        android:text="ReforestAPP"
+        android:textColor="#1A7A5F"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/txtConsejos"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Consejos"
+        android:textColor="#18AE00"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreAPP"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageButton
+        android:id="@+id/ib_salir"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="boton de salida"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_ib" />
+
+    <TextView
+        android:id="@+id/txtMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginTop="3sp"
+        android:gravity="center"
+        android:text="Consejos y datos prácticos"
+        android:textStyle="bold"
+        android:textColor="#0E513E"
+        android:textSize="16sp"
+        android:padding="1sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtConsejos"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ScrollView
+        android:id="@+id/ScrollContenedorButton"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="Scroll para los botones"
+        app:layout_constraintTop_toBottomOf="@+id/txtMensaje">
+
+        <!--En este elemento los botones podrian agregarse más si se quiere-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnRegistro"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:text="Registros"
+                android:backgroundTint="#206D00"/>
+
+            <Button
+                android:id="@+id/btnEstadistica"
+                android:layout_width="130sp"
+                android:layout_height="wrap_content"
+                android:text="Estadísticas"
+                android:backgroundTint="#206D00"/>
+            <Button
+                android:id="@+id/btnRecursos"
+                android:layout_width="130sp"
+                android:layout_height="wrap_content"
+                android:text="Recursos"
+                android:backgroundTint="#206D00"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Este Scroll contendra a los otros dos-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollContenedorButton">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/txt_TextoConsejos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consejos"
+        android:textStyle="bold"
+        android:layout_marginTop="5sp"
+        android:paddingStart="25sp"
+        />
+
+    <ScrollView
+        android:id="@+id/ScrollContenedorCuerpo1"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:contentDescription="Contenedor1"
+        android:layout_marginTop="10sp"
+        >
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="30dp"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/consejos_ib" />
+            <TextView
+                android:id="@+id/txt_Consejo1"
+                android:layout_width="170sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="155sp"
+                android:layout_marginBottom="25sp"
+                android:text="Piensa a largo plazo y elige árboles que se adapten al clima, al suelo y al propósito de la reforestación. No plantes monocultivos ni especies invasoras."
+                android:paddingStart="15sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="150sp"
+                    android:layout_height="150sp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/consejos_ib" />
+                <TextView
+                    android:id="@+id/txt_Consejo2"
+                    android:layout_width="170sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="155sp"
+                    android:layout_marginBottom="25sp"
+                    android:text="Mejora la vegetación existente y respeta la biodiversidad del lugar. No introduzcas árboles exóticos que puedan causar problemas ecológicos o sociales."
+                    android:paddingStart="15sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="150sp"
+                    android:layout_height="150sp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/consejos_ib" />
+                <TextView
+                    android:id="@+id/txt_Consejo3"
+                    android:layout_width="170sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="155sp"
+                    android:layout_marginBottom="25sp"
+                    android:text="Valora la reforestación natural y el papel de las comunidades locales. Involucra a los habitantes del lugar en el diseño, la ejecución y el seguimiento de la reforestación."
+                    android:paddingStart="15sp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="150sp"
+                    android:layout_height="150sp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/consejos_ib" />
+                <TextView
+                    android:id="@+id/txt_Consejo4"
+                    android:layout_width="170sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="155sp"
+                    android:text="Planifica el control de plagas y enfermedades que puedan afectar a los árboles. Usa métodos ecológicos y preventivos para evitar el uso de pesticidas"
+                    android:paddingStart="15sp" />
+            </FrameLayout>
+        </GridLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Datos prácticos"
+        android:textStyle="bold"
+        android:layout_marginTop="30sp"
+        android:paddingStart="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollContenedorCuerpo1"/>
+
+    <!--Segundo scroll-->
+    <ScrollView
+        android:id="@+id/ScrollContenedorCuerpo2"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:contentDescription="Contenedor2"
+        app:layout_constraintTop_toBottomOf="@+id/txtDatos"
+        android:layout_marginTop="20sp"
+        >
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="30dp"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="150sp"
+                    android:layout_height="150sp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/consejos_ib" />
+                <TextView
+                    android:id="@+id/txt_Consejo5"
+                    android:layout_width="170sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="155sp"
+                    android:layout_marginBottom="25sp"
+                    android:text="Piensa a largo plazo y elige árboles que se adapten al clima, al suelo y al propósito de la reforestación. No plantes monocultivos ni especies invasoras."
+                    android:paddingStart="15sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="150sp"
+                    android:layout_height="150sp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/consejos_ib" />
+                <TextView
+                    android:id="@+id/txt_Consejo6"
+                    android:layout_width="170sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="155sp"
+                    android:layout_marginBottom="25sp"
+                    android:text="Mejora la vegetación existente y respeta la biodiversidad del lugar. No introduzcas árboles exóticos que puedan causar problemas ecológicos o sociales."
+                    android:paddingStart="15sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="150sp"
+                    android:layout_height="150sp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/consejos_ib" />
+                <TextView
+                    android:id="@+id/txt_Consejo7"
+                    android:layout_width="170sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="155sp"
+                    android:layout_marginBottom="25sp"
+                    android:text="Valora la reforestación natural y el papel de las comunidades locales. Involucra a los habitantes del lugar en el diseño, la ejecución y el seguimiento de la reforestación."
+                    android:paddingStart="15sp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="150sp"
+                    android:layout_height="150sp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/consejos_ib" />
+                <TextView
+                    android:id="@+id/txt_Consejo8"
+                    android:layout_width="170sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="155sp"
+                    android:text="Planifica el control de plagas y enfermedades que puedan afectar a los árboles. Usa métodos ecológicos y preventivos para evitar el uso de pesticidas"
+                    android:paddingStart="15sp" />
+            </FrameLayout>
+        </GridLayout>
+    </ScrollView>
+
+
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

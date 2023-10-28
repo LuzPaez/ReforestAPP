@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapaDeforestacion">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="90dp"
+        android:layout_height="104dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/txtNombreAPP"
+        android:layout_width="match_parent"
+        android:layout_height="25sp"
+        android:layout_marginTop="104dp"
+        android:gravity="center"
+        android:text="ReforestAPP"
+        android:textColor="#1A7A5F"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/txtMapa"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Mapa de deforestación"
+        android:textColor="#18AE00"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreAPP"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageButton
+        android:id="@+id/ib_salir"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="boton de salida"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_ib" />
+
+    <ScrollView
+        android:id="@+id/ScrollContenedor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMapa"
+        android:layout_margin="20dp"
+        android:contentDescription="Mapa de deforestación">
+
+        <WebView
+            android:id="@+id/VistaWEB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

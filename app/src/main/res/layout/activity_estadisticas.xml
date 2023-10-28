@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Estadisticas">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="90dp"
+        android:layout_height="104dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/txtNombreAPP"
+        android:layout_width="match_parent"
+        android:layout_height="25sp"
+        android:layout_marginTop="104dp"
+        android:gravity="center"
+        android:text="ReforestAPP"
+        android:textColor="#1A7A5F"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/txtEstadisticas"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Estadísticas"
+        android:textColor="#18AE00"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreAPP"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageButton
+        android:id="@+id/ib_salir"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="boton de salida"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_ib" />
+
+    <TextView
+        android:id="@+id/txtMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginTop="3sp"
+        android:gravity="center"
+        android:text="Promedio de estadísticas"
+        android:textStyle="bold"
+        android:textColor="#0E513E"
+        android:textSize="16sp"
+        android:padding="1sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtEstadisticas"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ScrollView
+        android:id="@+id/ScrollContenedorButton"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:contentDescription="Scroll para los botones"
+        app:layout_constraintTop_toBottomOf="@+id/txtMensaje">
+
+        <!--En este elemento los botones podrian agregarse más si se quiere-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnRegistro"
+                android:layout_width="130sp"
+                android:layout_height="wrap_content"
+                android:text="Registro"
+                android:backgroundTint="#206D00"/>
+
+            <Button
+                android:id="@+id/btnConsejos"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:text="Consejos"
+                android:backgroundTint="#206D00"/>
+
+            <Button
+                android:id="@+id/btnRecursos"
+                android:layout_width="130sp"
+                android:layout_height="wrap_content"
+                android:text="Recursos"
+                android:backgroundTint="#206D00"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/ScrollContenedorCuerpo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Scroll para contener el cuerpo de la vista"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollContenedorButton"
+        android:layout_marginTop="310sp"
+        android:layout_marginEnd="25sp"
+        android:layout_marginStart="25sp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtZona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Localización - Nombre de la zona"
+            android:paddingStart="25sp"/>
+
+        <EditText
+            android:id="@+id/Edtext_Zona"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_gravity="center"
+            android:hint="Ingrese el nombre de la zona"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:background="@drawable/borde_entrada"
+            android:layout_margin="10sp"
+            />
+
+            <TextView
+                android:id="@+id/txtNomEsp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de la especie, árbol, planta"
+                android:paddingStart="25sp"/>
+
+
+            <EditText
+                android:id="@+id/Edtext_Especie"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="text"
+                android:layout_gravity="center"
+                android:hint="Ingrese el nombre de la especie, árbol, planta"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:background="@drawable/borde_entrada"
+                android:layout_margin="10sp"
+                />
+
+            <!--Elementos horizontales-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtPrecioEsp"
+                        android:layout_width="170sp"
+                        android:layout_height="wrap_content"
+                        android:text="Precio Especie"
+                        android:paddingStart="25sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/Edtext_PrecioEsp"
+                        android:layout_width="170sp"
+                        android:layout_height="48dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:layout_gravity="center"
+                        android:hint="0"
+                        android:textSize="14sp"
+                        android:padding="10dp"
+                        android:background="@drawable/borde_entrada"
+                        android:layout_margin="20sp"
+                        />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtCantidadSembrada"
+                        android:layout_width="170sp"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad sembrada"
+                        android:paddingStart="25sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/Edtext_CantidadSembrada"
+                        android:layout_width="170sp"
+                        android:layout_height="48dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:layout_gravity="center"
+                        android:hint="0"
+                        android:textSize="14sp"
+                        android:padding="10dp"
+                        android:background="@drawable/borde_entrada"
+                        android:layout_margin="20sp"
+                        />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtMesSiembra"
+                        android:layout_width="170sp"
+                        android:layout_height="wrap_content"
+                        android:text="Mes de siembra"
+                        android:paddingStart="25sp"
+
+                        />
+
+                    <Spinner
+                        android:id="@+id/Spin_Meses"
+                        android:layout_width="170sp"
+                        android:layout_height="48sp"
+                        android:background="@drawable/borde_entrada"
+                        android:layout_margin="17sp"
+                        android:padding="10dp"
+                        />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtArea"
+                        android:layout_width="170sp"
+                        android:layout_height="wrap_content"
+                        android:text="Área de plantación m2"
+                        android:paddingStart="25sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/Edtext_Area"
+                        android:layout_width="170sp"
+                        android:layout_height="48dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:layout_gravity="center"
+                        android:hint="0 m2"
+                        android:textSize="14sp"
+                        android:padding="10dp"
+                        android:background="@drawable/borde_entrada"
+                        android:layout_margin="20sp"
+                        />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_GuardarRegistro"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Guardar registro"
+                android:layout_margin="20dp"
+                android:backgroundTint="#00674B"/>
+
+            <!--Botones para calcular y sus respectivos espacios-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_TotalCosto"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Total del costo de siembra"
+                android:layout_margin="20dp"
+                android:backgroundTint="#00674B"/>
+            <TextView
+                android:id="@+id/txt_TotalCosto"
+                android:layout_width="170sp"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:paddingStart="25sp"
+                android:layout_marginTop="20sp"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_Promedio"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Promedio del costo de siembra"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="#00674B"/>
+                <TextView
+                    android:id="@+id/txt_PromedioCosto"
+                    android:layout_width="170sp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:paddingStart="25sp"
+                    android:layout_marginTop="20sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_Densidad"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Densidad de árboles por área"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="#00674B"/>
+                <TextView
+                    android:id="@+id/txt_DensidadArea"
+                    android:layout_width="170sp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:paddingStart="25sp"
+                    android:layout_marginTop="20sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTabla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tabla de registro"
+                android:paddingStart="25sp"/>
+
+            <!--Tabla de datos-->
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation= "horizontal" >
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1"
+                    android:layout_margin="10dp">
+
+                    <TableRow
+                        android:background="#00674B"
+                        >
+                        <TextView
+                            android:text="Zona"
+                            android:padding="10sp"
+                            android:textColor="@color/white"
+                            />
+
+                        <TextView
+                            android:text="Especie"
+                            android:padding="10sp"
+                            android:textColor="@color/white"
+                            />
+                        <TextView
+                            android:text="Precio Unitario"
+                            android:padding="10sp"
+                            android:textColor="@color/white"
+                            />
+                        <TextView
+                            android:text="Cantidad"
+                            android:padding="10sp"
+                            android:textColor="@color/white"
+                            />
+                        <TextView
+                            android:text="Mes"
+                            android:padding="10sp"
+                            android:textColor="@color/white"
+                            />
+                        <TextView
+                            android:text="Area"
+                            android:padding="10sp"
+                            android:textColor="@color/white"
+                            />
+
+                    </TableRow>
+
+                    <!--Campos 2 fila-->
+
+                    <TableRow>
+                        <TextView
+                            android:text="Zona"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Especie"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Precio Unitario"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Cantidad"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Mes"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Area"
+                            android:padding="10sp"
+                            />
+
+                    </TableRow>
+
+                    <!--Campo 3 fila-->
+
+                    <TableRow>
+                        <TextView
+                            android:text="Zona"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Especie"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Precio Unitario"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Cantidad"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Mes"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Area"
+                            android:padding="10sp"
+                            />
+
+                    </TableRow>
+
+
+                    <TableRow>
+                        <TextView
+                            android:text="Zona"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Especie"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Precio Unitario"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Cantidad"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Mes"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Area"
+                            android:padding="10sp"
+                            />
+
+                    </TableRow>
+
+
+                    <TableRow>
+                        <TextView
+                            android:text="Zona"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Especie"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Precio Unitario"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Cantidad"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Mes"
+                            android:padding="10sp"
+                            />
+                        <TextView
+                            android:text="Area"
+                            android:padding="10sp"
+                            />
+
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+    <!--Imagenes de diagramas/ graficos-->
+            <TextView
+                android:id="@+id/txtGraficos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gráficas"
+                android:paddingStart="25sp"
+                android:layout_marginTop="20sp"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:contentDescription="Graficos">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="300sp"
+                    android:layout_height="300sp"
+                    android:scaleType="fitCenter"
+                    android:layout_margin="10sp"
+                    app:srcCompat="@drawable/grafico1" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="300sp"
+                    android:layout_height="300sp"
+                    android:layout_margin="10sp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/grafico2" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

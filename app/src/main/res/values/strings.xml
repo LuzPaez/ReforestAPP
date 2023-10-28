@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">InicioSesionRA</string>
+    <string name="registros">Registros</string>
+
+    <!--String array para las opciones del departamento-->
+    <string-array name="DepartamentoOpciones">
+        <item>Antioquia</item>
+        <item>Boyaca</item>
+        <item>Cundinamarca</item>
+        <item>Nariño</item>
+        <item>Santander</item>
+        <item>Risaralda</item>
+        <item>Guaviare</item>
+    </string-array>
+    <!--String array para las opciones del mes-->
+    <string-array name="MesOpciones">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+    </string-array>
+</resources>

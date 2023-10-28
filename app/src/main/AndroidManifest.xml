@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Habilitación del permiso de internet-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="ReforestAPP"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.InicioSesionRA"
+        tools:targetApi="31">
+        <activity
+            android:name=".MapaDeforestacion"
+            android:exported="false" />
+        <activity
+            android:name=".Configuracion"
+            android:exported="false" />
+        <activity
+            android:name=".Recursos"
+            android:exported="false" />
+        <activity
+            android:name=".Consejos"
+            android:exported="false" />
+        <activity
+            android:name=".Estadisticas"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroPlantas"
+            android:exported="false" />
+        <activity
+            android:name=".principalRA"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarContrasena3"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarContrasena2"
+            android:exported="false" />
+        <activity
+            android:name=".OlvidoContrasena"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroUsurarioRA"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
